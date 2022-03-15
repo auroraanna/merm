@@ -9,7 +9,7 @@
         <ul>
             {%- for post in term.pages -%}
                 <li class="tag-list">
-                    {{ post.date | date(format="%Y.%m.%d") }}
+                    {{ post.date | date(format="%Y-%m-%d %H:%M:%S%z") }}
                     :: <a href="{{ post.permalink }}">{{ post.title }}</a>
                     :: {% for tag in post.taxonomies["tags"] -%} <a href="{%- set _tag = get_taxonomy_url(kind="tags", name=tag) -%}{{ _tag }}">#{{ tag }}</a> {% endfor %}
                 </li>
