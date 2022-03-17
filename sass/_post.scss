@@ -15,7 +15,7 @@
   }
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--outline);
   }
 
   // %meta {
@@ -34,18 +34,15 @@
   // }
 
   &-meta {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: var(--accent-alpha-70);
+    @include menu;
+    color: var(--on_surface-variant);
+    background-color: var(--surface_variant);
   }
 
   &-title {
-    --border: 3px dotted var(--accent);
     position: relative;
-    color: var(--accent);
+    color: var(--on_background);
     margin: 0 0 15px;
-    padding-bottom: 15px;
-    border-bottom: var(--border);
 
     &:after {
       content: '';
@@ -53,7 +50,7 @@
       bottom: 2px;
       display: block;
       width: 100%;
-      border-bottom: var(--border);
+      border-bottom: var(--outline);
     }
     
     a {
@@ -72,7 +69,6 @@
       content: '⦿';
       position: absolute;
       left: -20px;
-      color: var(--accent);
     }
     ul {
 
@@ -80,7 +76,6 @@
         content: '■';
         position: absolute;
         left: -20px;
-        color: var(--accent);
       }
 
       ul {
@@ -89,7 +84,6 @@
           content: '►';
           position: absolute;
           left: -20px;
-          color: var(--accent);
         }
       }
     }
