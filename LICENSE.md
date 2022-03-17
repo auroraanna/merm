@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+Copyright (c) 2022 papojari
 Copyright (c) 2019 elias julian marko garcia
 Copyright (c) 2019 Paweł Romanowski
 Copyright (c) 2019 panr
