@@ -18,6 +18,13 @@
         {#- Skipping logic for cover as was in original Terminal theme -#}
 
             {{ section.content | safe }}
+
+            <ul>
+                {% for page in section.pages %}
+                <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+
         {# TODO: Decide if any sort of commenting functionality is desired? #}
         {#%- include "snippets/comments.html"  -%#}
     </article>
