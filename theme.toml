@@ -1,11 +1,11 @@
-name = "zerm"
-description = "A minimalistic and dark theme based on Radek Kozieł's theme for Hugo"
+name = "merm"
+description = "A soft material-like light and dark theme based on ejmg's zerm theme for Zola"
 license = "MIT"
-homepage = "https://github.com/ejmg/zerm"
+homepage = "https://codeberg.org/papojari/merm"
 # The minimum version of Zola required
 min_version = "0.8.0"
 # An optional live demo URL
-demo = "https://zerm.ejmg.now.sh/"
+demo = "https://papojari.codeberg.page/"
 
 # Any variable there can be overriden in the end user `config.toml`
 # You don't need to prefix variables by the theme name but as this will
@@ -15,12 +15,12 @@ demo = "https://zerm.ejmg.now.sh/"
 
 # The theme author info: you!
 [author]
-name = "elias julian marko garcia"
-homepage = "https://github.com/ejmg"
+name = "papojari"
+homepage = "https://papojari.codeberg.page"
 
 # If this is porting a theme from another static site engine, provide
 # the info of the original author here
 [original]
-author =  "Radek Kozieł"
-homepage = "https://radoslawkoziel.pl/"
-repo = "https://github.com/panr/hugo-theme-terminal"
+author =  "ejmg"
+homepage = "https://github.com/ejmg"
+repo = "https://github.com/ejmg/zerm"
