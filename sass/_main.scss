@@ -327,3 +327,18 @@ hr {
 	color: var(--on_primary);
 }
 
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--on_surface_variant);
+	border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--on_secondary_container);
+}
+::-webkit-scrollbar-track {
+	background: var(--secondary_container);
+	border-radius: 0;
+}
