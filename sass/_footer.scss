@@ -30,7 +30,7 @@
     // so `--light-color-secondary` color exists no where else in the stylings
     // color: var(--light-color-secondary);
     // As a substitute, I'm going to use the alpha-70 version of accent.
-    color: var(--accent-alpha-70);
+    color: var(--on_background);
 
     &--user {
       margin: auto;

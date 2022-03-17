@@ -1,11 +1,11 @@
 @import "variables";
 
 @mixin menu {
-  background: var(--background);
-  box-shadow: var(--shadow);
-  color: var(--color);
-  border: 2px solid;
-  margin: 0;
+  background: var(--secondary);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: var(--on_secondary);
+  border-radius: 0.4em;
+  margin: 10px 0;
   padding: 10px;
   list-style: none;
   z-index: 99;
@@ -26,14 +26,6 @@
     display: flex;
     flex: 1;
 
-    &:after {
-      content: '';
-      background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
-      display: block;
-      width: 100%;
-      right: 10px;
-    }
-
     a {
       flex: 0 0 auto;
       max-width: 100%;
@@ -42,10 +34,6 @@
   }
 
   .menu {
-    margin: 20px 0;
-    --shadow-color: var(--accent-alpha-70);
-    --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
-
     @media (max-width: $phone-max-width) {
         @include menu;
         position: absolute;
@@ -114,7 +102,7 @@
         left: 0;
 
         &-trigger {
-          color: var(--accent);
+          color: var(--on_secondary_container);
           user-select: none;
           cursor: pointer;
         }
@@ -128,8 +116,11 @@
     }
       
     &-trigger {
-      color: var(--accent);
-      border: 2px solid;
+      font-size: 1.3rem;
+      color: var(--on_secondary_container);
+      background-color: var(--secondary_container);
+      border-radius: 0.4em;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
       margin-left: 10px;
       height: 100%;
       padding: 3px 8px;

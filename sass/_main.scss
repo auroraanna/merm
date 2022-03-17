@@ -13,11 +13,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Google Sans', Inter, Roboto, 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.54;
   background-color: var(--background);
-  color: var(--color);
+  color: var(--on_background);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -27,6 +27,10 @@ body {
   @media (max-width: $phone-max-width) {
     font-size: 1rem;
   }
+}
+
+nav {
+  margin-top: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,6 +114,10 @@ img {
 
 p {
   margin-bottom: 20px;
+
+  a {
+    color: var(--primary);
+  }
 }
 
 figure {
@@ -140,8 +148,8 @@ figure {
     font-size: 14px;
     padding: 5px 10px;
     margin-top: 5px;
-    background: var(--accent);
-    color: var(--background);
+    background: var(--primary);
+    color: var(--on_primary);
 
     &.left {
       text-align: left;
@@ -158,23 +166,25 @@ figure {
 }
 
 code {
-  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Iosevka', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: normal;
-  background: var(--accent-alpha-20);
-  color: var(--accent);
+  background: var(--secondary_container);
+  color: var(--on_secondary_container);
   padding: 1px 6px;
+  border-radius: 0.2em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin: 0 2px;
   font-size: .95rem;
 }
 
 pre {
-  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Iosevka', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: "liga";  
   padding: 20px 10px;
   font-size: .95rem;
   overflow: auto;
-  border-top: 1px solid rgba(255, 255, 255, .1);
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 0.4em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   + pre {
     border-top: 0;
@@ -191,15 +201,14 @@ pre {
       margin: 0;
       padding: 0;
       font-size: inherit;
-      border: none;
+      box-shadow : none;
   }
 }
 
 blockquote {
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  margin: 40px 0;
-  padding: 25px;
+  border-left: 2px solid var(--outline);
+  margin: 0;
+  padding: 15px;
 
   @media (max-width: $phone-max-width) {
     padding-right: 0;
@@ -225,14 +234,6 @@ blockquote {
   p {
     position: relative;
   }
-
-  p:before {
-    content: '>';
-    display: block;
-    position: absolute;
-    left: -25px;
-    color: var(--accent);
-  }
 }
 
 table {
@@ -243,12 +244,21 @@ table {
 }
 
 table, th, td {
-  border: 1px dashed var(--accent);
   padding: 10px;
 }
 
 th {
-  color: var(--accent);
+  color: var(--on_secondary_container);
+}
+
+tr:nth-child(even) {
+  background: var(--secondary);
+  color: var(--on_secondary);
+}
+
+tr:nth-child(odd) {
+  background: var(--secondary_container);
+  color: var(--on_secondary_container)
 }
 
 ul, ol {
@@ -281,7 +291,6 @@ ol ol {
   padding: 40px;
   max-width: 864px;
   min-height: 100vh;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
 
   &.full,
   &.center {
@@ -305,7 +314,7 @@ ol ol {
 hr {
   width: 100%;
   border: none;
-  background: var(--border-color);
+  background: var(--outline);
   height: 1px;
 }
 
