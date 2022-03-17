@@ -2,9 +2,9 @@
 
 A soft material-like light and dark theme based on [ejmg's zerm theme](https://github.com/ejmg/zerm) for [Zola](https://getzola.org).
 
-![Screenshot](../master/zerm-preview.png?raw=true)
+![Screenshot](screenshot.png)
 
-[**Live Preview!**](https://zerm.ejmg.now.sh/)
+[Web preview](https://papojari.codeberg.page/)
 
 ## Differences
 
