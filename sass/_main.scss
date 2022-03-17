@@ -321,3 +321,9 @@ hr {
 .hidden {
   display: none;
 }
+
+::selection {
+	background-color: var(--primary);
+	color: var(--on_primary);
+}
+
