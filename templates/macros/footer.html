@@ -1,17 +1,13 @@
 {% macro copyright() %}
     {%- if config.extra.copyright -%}
-        <div class="copyright copyright--user">
+        <div>
             <span>{{ config.extra.copyright | safe }}</span>
             <span>:: Powered by <a href="https://www.getzola.org/">Zola</a></span>
         </div>
     {%- else -%}
-        <div class="copyright">
+        <div>
             <span>© 2019 <a href="https://github.com/ejmg/zerm">zerm</a> :: © 2022 <a href="https://papojari.codeberg.page">papojari</a></span>
             <span>:: Powered by <a href="https://www.getzola.org/">Zola</a></span>
         </div>
     {%- endif -%}
 {% endmacro copyright %}
-
-{% macro script() %}
-    <script type="text/javascript" src="{{ get_url(path="assets/js/main.js") }}"></script>
-{% endmacro script %}

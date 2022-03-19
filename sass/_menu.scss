@@ -1,0 +1,44 @@
+#menu details {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 6.5rem;
+}
+
+#menu summary {
+  user-select: none;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  font-size: 1.3rem;
+  background: var(--primary-container);
+  color: var(--on_primary_container);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#menu summary:active {
+  background: var(--primary);
+  color: var(--on_primary);
+}
+
+#menu ul {
+	position: absolute;
+	top: 3.2rem;
+	right: 0.25rem;
+	padding: 0.4rem;
+	width: 8em;
+	background: var(--on_secondary);
+  color: var(--secondary);
+	list-style-type: none;
+	text-align: right;
+	font-size: 1.2rem;
+	border-radius: 0.4rem;
+	margin: 0;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#menu li {
+	margin-top: 0;
+}

@@ -1,18 +1,25 @@
 .logo {
+  position: fixed;
+	top: 1rem;
+	left: 1rem;
   display: flex;
   align-items: center;
-  text-decoration: none;
   background: var(--primary);
   color: var(--on_primary);
-  padding: 5px 5px;
+  padding: 0.4rem;
   border-radius: 0.4rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   font-size: 1.3rem;
-}
-.logo img {
-  background: var(--on_primary);
-  width: 2rem;
-  padding: 0.2rem;
-  border-radius: 0.4rem;
-  margin: 0.2rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    background: var(--on_primary);
+    width: 2rem;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    margin-right: 0.4rem;
+  }
 }
