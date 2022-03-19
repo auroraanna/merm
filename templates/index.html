@@ -1,7 +1,5 @@
 {% import "macros/head.html" as head -%}
 {% import "macros/logo.html" as logo -%}
-{% import "macros/header.html" as header -%}
-{% import "macros/extended_header.html" as extended_header -%}
 {% import "macros/lists.html" as lists -%}
 {% import "macros/posts.html" as posts -%}
 {% import "macros/social.html" as social -%}
@@ -9,7 +7,6 @@
 {% import "macros/menu.html" as menu -%}
 {% import "macros/pagination.html" as pagination -%}
 {% import "macros/footer.html" as footer -%}
-{% import "macros/extended_footer.html" as extended_footer -%}
 {% import "macros/comments.html" as comments -%}
 
 <!DOCTYPE html>
@@ -56,38 +53,38 @@
             {%- set container = "container" -%}
         {%- endif -%}
 
-        <div class="{{ container }}">
-            {%- block header -%}
-                {{ header::header() }}
-            {%- endblock header -%}
-            <div class="content">
-                {%-  block main -%}
-                    {{ lists::list_pages() }}
-                {%- endblock main -%}
-            </div>
+        <header>
+            {%- block logo -%}
+                {{ logo::logo() }}
+            {%- endblock logo -%}
+
+            {# Check if there are menu items to render, yes if > 0 #}
+            {%- set num = config.extra.main_menu | length -%}
+            {% if num > 0 -%}
+                {{ menu::menu() }}
+            {% endif -%}
+        </header>
+        <main class="{{ container }}">
+            {%-  block main -%}
+                {{ lists::list_pages() }}
+            {%- endblock main -%}
+
             {#-
             I keep pagination out of list, unlike Terminal, because I don't
             like how the pagination buttons move with the width of the content
             div.
             -#}
+
             {%- block pagination -%}
                 {{ pagination::paginate() }}
             {%- endblock pagination -%}
-
-            {%- block footer -%}
-                <footer class="footer">
-                    <div class="footer__inner">
-                        {%- block copyright -%}
-                            {{ footer::copyright() }}
-                        {%- endblock copyright -%}
-
-                        {%- block script -%}
-                            {{ footer::script() }}
-                        {%- endblock script -%}
-                    </div>
-                    {{ extended_footer::extended_footer() }}
-                </footer>
-            {%- endblock footer -%}
-        </div>
+        </main>
+        {%- block footer -%}
+            <footer>
+                {%- block copyright -%}
+                    {{ footer::copyright() }}
+                {%- endblock copyright -%}
+            </footer>
+        {%- endblock footer -%}
     </body>
 </html>
