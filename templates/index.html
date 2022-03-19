@@ -1,90 +1,27 @@
-{% import "macros/head.html" as head -%}
-{% import "macros/logo.html" as logo -%}
-{% import "macros/lists.html" as lists -%}
-{% import "macros/posts.html" as posts -%}
-{% import "macros/social.html" as social -%}
-{% import "macros/utils.html" as utils -%}
-{% import "macros/menu.html" as menu -%}
-{% import "macros/pagination.html" as pagination -%}
-{% import "macros/footer.html" as footer -%}
-{% import "macros/comments.html" as comments -%}
+{% extends "base.html" -%}
 
-<!DOCTYPE html>
-<html lang="{{ lang }}">
-    <head>
-        {%- block title -%}
-            <title>{{ config.title }}</title>
-        {%- endblock title -%}
+{%- block title %}
+    <title>{{ section.title }} - {{ config.extra.author }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
 
-        {%- block general_meta -%}
-            {{ head::general_meta() }}
-        {%- endblock general_meta -%}
-
-        {%- block og_preview -%}
-            {{ social::og_preview() }}
-        {%- endblock og_preview -%}
-
-        {%- block css -%}
-            {{ head::styling() }}
-        {%- endblock css -%}
-
-        {%- block favicon -%}
-            {{ head::favicon() }}
-        {%- endblock favicon -%}
-
-        {%- block rss -%}
-            {{ head::rss() }}
-        {%- endblock rss -%}
-
-        {%- block math -%}
-        {%- endblock math -%}
-    </head>
-    <body>
-        {#
-        "container full" when width == True, regardless of center
-        "container center" when only center == True
-        "container" when both false.
-        #}
-        {%- if config.extra.full_width -%}
-            {%- set container = "container full" -%}
-        {%- elif config.extra.center -%}
-            {%- set container = "container center" -%}
-        {%- else -%}
-            {%- set container = "container" -%}
-        {%- endif -%}
-
+{%- block main -%}
+    <article class="post">
         <header>
-            {%- block logo -%}
-                {{ logo::logo() }}
-            {%- endblock logo -%}
-
-            {# Check if there are menu items to render, yes if > 0 #}
-            {%- set num = config.extra.main_menu | length -%}
-            {% if num > 0 -%}
-                {{ menu::menu() }}
-            {% endif -%}
+            <h1 class="post-title">
+                <a href="{{ section.permalink  }}">{{ section.title }}</a>
+            </h1>
+            {{ posts::section_meta(section=section, author=config.extra.show_author) }}
         </header>
-        <main class="{{ container }}">
-            {%-  block main -%}
-                {{ lists::list_pages() }}
-            {%- endblock main -%}
 
-            {#-
-            I keep pagination out of list, unlike Terminal, because I don't
-            like how the pagination buttons move with the width of the content
-            div.
-            -#}
+        {#- Skipping logic for cover as was in original Terminal theme -#}
 
-            {%- block pagination -%}
-                {{ pagination::paginate() }}
-            {%- endblock pagination -%}
-        </main>
-        {%- block footer -%}
-            <footer>
-                {%- block copyright -%}
-                    {{ footer::copyright() }}
-                {%- endblock copyright -%}
-            </footer>
-        {%- endblock footer -%}
-    </body>
-</html>
+            {{ section.content | safe }}
+
+			{{ lists::list_pages() }}
+
+        {# TODO: Decide if any sort of commenting functionality is desired? #}
+        {#%- include "snippets/comments.html"  -%#}
+    </article>
+{%- endblock main -%}
