@@ -282,6 +282,24 @@ hr {
   display: none;
 }
 
+.badge {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: var(--surface_variant);
+  color: var(--on_surface_variant);
+
+  img {
+    padding-right: 0.4rem;
+    height: 25px;
+  }
+}
+
 ::selection {
   background-color: var(--primary);
   color: var(--on_primary);
