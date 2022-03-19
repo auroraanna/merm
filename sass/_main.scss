@@ -320,3 +320,13 @@ hr {
   background: var(--secondary_container);
   border-radius: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  .invert-when-dark {
+    filter: invert(100%);
+  }
+
+  .white-when-dark {
+    filter: invert(100%) grayscale(100%) brightness(1000%);
+  }
+}
