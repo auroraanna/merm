@@ -63,14 +63,14 @@
     list-style: none;
 
     li:before {
-      content: '⦿';
+      content: '🌵';
       position: absolute;
       left: -20px;
     }
     ul {
 
       li:before {
-        content: '■';
+        content: '🌳';
         position: absolute;
         left: -20px;
       }
@@ -78,14 +78,36 @@
       ul {
 
         li:before {
-          content: '►';
+          content: '🥦';
           position: absolute;
           left: -20px;
         }
+
+        ul {
+          li:before {
+            content: '🌲';
+            position: absolute;
+            left: -20px;
+          }
+
+          ul {
+            li:before {
+              content: '🌽';
+              position: absolute;
+              left: -20px;
+            }
+
+            ul {
+              li:before {
+                content: '🌻';
+                position: absolute;
+                left: -20px;
+              }
+            }
+          }
+        }
       }
     }
-  }
-}
   }
 }
 
