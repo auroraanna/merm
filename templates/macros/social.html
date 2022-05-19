@@ -20,7 +20,7 @@
 
 {% macro og_description() %}
     {%- if section -%}
-        {%-  if section.description -%}
+        {%- if section.description -%}
             {{ section.description }}
         {%- else -%}
             {{ config.description }}
