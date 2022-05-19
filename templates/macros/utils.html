@@ -1,9 +1,9 @@
 {% macro author(page) %}
     ::
-    {% if page.extra.author -%}
-        {{ page.extra.author }}
-    {%- else -%}    
-        {{ config.extra.author }}
+    {% if page.extra.author.username -%}
+        {{ page.extra.author.username }}
+    {%- else -%}
+        {{ config.extra.author.username }}
     {%- endif -%}
 {%- endmacro author-%}
 

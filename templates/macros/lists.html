@@ -1,18 +1,18 @@
 {% macro list_pages() %}
 <section class="posts">
-    
+
     {%- for page in paginator.pages -%}
-    
+
     <div class="post on-list">
         <header>
             <h2 class="post-title">
                 <a href="{{ page.permalink }}">{{ page.title }}</a>
             </h2>
         </header>
-        
-        
-        {{ posts::meta(page=page, author=config.extra.show_author) }}
-        
+
+
+        {{ posts::meta(page=page) }}
+
         {#-                NOTE              -#}
         {#- --------------------------------  -#}
         {#- Skipping the Cover page implementation. Not included/covered for now. -#}

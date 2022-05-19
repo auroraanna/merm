@@ -1,13 +1,11 @@
-{% macro section_meta(section, author) %}
+{% macro section_meta(section) %}
     <div class="post-meta">
         <span class="post-date">
             {{ utils::date_custom_format(page=section) }}
             {{ utils::date_custom_format_updated_display(page=section) }}
         </span>
         <span class="post-author">
-            {%- if author -%}
-                {{ utils::author(page=section) }}
-            {%- endif -%}
+            {{ utils::author(page=section) }}
         </span>
     </div>
 {% endmacro section_meta %}
@@ -23,16 +21,14 @@
     {% endif %}
 {% endmacro langs %}
 
-{% macro meta(page, author) %}
+{% macro meta(page) %}
     <div class="post-meta">
         <span class="post-date">
             {{ utils::date_custom_format(page=page) }}
             {{ utils::date_custom_format_updated_display(page=page) }}
         </span>
         <span class="post-author">
-            {%- if author -%}
-                {{ utils::author(page=page) }}
-            {%- endif -%}
+            {{ utils::author(page=page) }}
         </span>
         {{  posts::taxonomies(taxonomy=page.taxonomies,
             disp_cat=config.extra.show_categories,
