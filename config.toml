@@ -49,15 +49,6 @@ taxonomies = [
 
 [extra]
 # Put all your custom variables here
-#
-# Many configurations are taken directly from Terminal's config.toml
-# ---------------------------------------------------------
-
-# Author name to be added to posts, if enabled.
-author = "you!"
-
-# Show author's name in blog post meta data.
-show_author = false
 
 # Show categories a blog post is marked with in its meta data.
 show_categories = true
@@ -134,3 +125,13 @@ disqus = { enabled=false, short_name="" }
 toc = true
 
 date_format = "%Y-%m-%d %H:%M:%S%z"
+
+[extra.author]
+# Show author's name in blog post meta data.
+show = true
+# First, last name, username and gender for [The Open Graph protocol](https://ogp.me/)
+first_name = "Anna"
+last_name = "Neugebauer"
+## The username is also shown as the section and post author
+username = "annaaurora"
+gender = "female"
