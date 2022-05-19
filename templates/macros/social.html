@@ -8,6 +8,9 @@
     <meta property="og:description" content="{{ social::og_description() }}"/>
     {%- if config.extra.og_preview_img -%}
         <meta property="og:image" content="{{ get_url(path=config.extra.og_preview_img) }}"/>
+    {%- elif config.extra.favicon -%}
+        <meta property="og:image" content="{{ get_url(path=config.extra.favicon) }}"/>
+    {%- endif -%}
     {%- if config.extra.author.username -%}
         <meta property="og:profile:username" content="{{ config.extra.author.username }}"/>
         <meta property="og:article:author" content="{{ config.extra.author.username }}"/>
