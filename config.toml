@@ -83,7 +83,7 @@ show_menu_items = 2
 full_width = false
 
 # center theme with default width.
-center = false
+center = true
 
 # set a custom favicon. Must be placed in root of static/ directory...
 # favicon = ""
