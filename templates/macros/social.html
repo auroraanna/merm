@@ -18,6 +18,20 @@
     {%- if config.extra.author.gender -%}
         <meta property="og:profile:gender" content="{{ config.extra.author.gender }}"/>
     {%- endif -%}
+    {%- if section -%}
+        {%- if section.date -%}
+            <meta property="og:article:published_time" content="{{ utils::date(page=section) }}"/>
+        {%- endif -%}
+        {%- if section.extra["updated"] -%}
+            <meta property="og:article:modified_time" content="{{ utils::date_updated(page=section) }}"/>
+        {%- endif -%}
+    {%- elif page -%}
+        {%- if page.date -%}
+            <meta property="og:article:published_time" content="{{ utils::date(page=page) }}"/>
+        {%- endif -%}
+        {%- if page.extra["updated"] -%}
+            <meta property="og:article:modified_time" content="{{ utils::date_updated(page=page) }}"/>
+        {%- endif -%}
     {%- endif -%}
 {% endmacro og_preview %}
 
