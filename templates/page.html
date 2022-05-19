@@ -23,11 +23,11 @@
             {{ posts::meta(page=page, author=config.extra.show_author) }}
             {{ posts::langs(page=page) }}
 
-            {%- block ToC -%}
-                {%- if page.extra.ToC or config.extra.ToC -%}
+            {%- block toc -%}
+                {%- if page.extra.toc or config.extra.toc -%}
                     {{ toc::toc(t=page.toc) }}
                 {%- endif -%}
-            {%- endblock ToC -%}
+            {%- endblock toc -%}
         </header>
 
         {#- Skipping logic for cover as was in original Terminal theme -#}
