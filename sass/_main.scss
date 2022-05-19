@@ -211,16 +211,11 @@ blockquote {
 table {
   table-layout: fixed;
   border-collapse: collapse;
-  width: 100%;
   margin: 40px 0;
 }
 
 table, th, td {
   padding: 10px;
-}
-
-th {
-  color: var(--on_secondary_container);
 }
 
 tr:nth-child(even) {
