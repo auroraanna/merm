@@ -6,3 +6,39 @@
         {{ config.extra.author }}
     {%- endif -%}
 {%- endmacro author-%}
+
+{% macro date(page) %}
+    {%- if page.date -%}
+        {{ page.date | date(format="%Y-%m-%dT%H:%M:%S%z") }}
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_updated(page) %}
+    {%- if page.extra["updated"] -%}
+        {{ page.extra["updated"] | date(format="%Y-%m-%dT%H:%M:%S%z") }}
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_updated_display(page) %}
+    {%- if page.extra["updated"] -%}
+        [Updated: {{ page.extra["updated"] | date(format="%Y-%m-%dT%H:%M:%S%z") }}]
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_custom_format(page) %}
+    {%- if page.date -%}
+        {{ page.date | date(format=config.extra.date_format) }}
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_custom_format_updated(page) %}
+    {%- if page.extra["updated"] -%}
+        {{ page.extra["updated"] | date(format=config.extra.date_format) }}
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_custom_format_updated_display(page) %}
+    {%- if page.extra["updated"] -%}
+        [Updated: {{ page.extra["updated"] | date(format=config.extra.date_format) }}]
+    {%- endif -%}
+{%- endmacro date-%}
