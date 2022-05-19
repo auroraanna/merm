@@ -132,3 +132,5 @@ disqus = { enabled=false, short_name="" }
 # Table of Contents can be generated for individual articles
 # by adding `toc = true` in [extra] section in frontmatter
 toc = true
+
+date_format = "%Y-%m-%d %H:%M:%S%z"

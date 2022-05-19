@@ -1,17 +1,9 @@
 {% macro section_meta(section, author) %}
     <div class="post-meta">
         <span class="post-date">
-            {%- if page.date -%}
-                {{ page.date | date(format="%Y-%m-%d %H:%M:%S%z") }}
-                {# end of page.date if-check #}
-            {%- endif -%}
-
-            {%- if section.extra["updated"] -%}
-                [Updated: {{ section.extra["updated"] | date(format="%Y-%m-%d %H:%M:%S%z") }}]
-                {# end of section.updated if-check #}
-            {%- endif -%}
+            {{ utils::date_custom_format(page=section) }}
+            {{ utils::date_custom_format_updated_display(page=section) }}
         </span>
-
         <span class="post-author">
             {%- if author -%}
                 {{ utils::author(page=section) }}
@@ -34,23 +26,14 @@
 {% macro meta(page, author) %}
     <div class="post-meta">
         <span class="post-date">
-            {%- if page.date -%}
-                {{ page.date | date(format="%Y-%m-%d %H:%M:%S%z") }}
-                {# end of page.date if-check #}
-            {%- endif -%}
-
-            {%- if section.extra["updated"] -%}
-                [Updated: {{ section.extra["updated"] | date(format="%Y-%m-%d %H:%M:%S%z") }}]
-                {# end of section.updated if-check #}
-            {%- endif -%}
+            {{ utils::date_custom_format(page=page) }}
+            {{ utils::date_custom_format_updated_display(page=page) }}
         </span>
-
         <span class="post-author">
             {%- if author -%}
                 {{ utils::author(page=page) }}
             {%- endif -%}
         </span>
-
         {{  posts::taxonomies(taxonomy=page.taxonomies,
             disp_cat=config.extra.show_categories,
             disp_tag=config.extra.show_tags) }}
@@ -58,7 +41,6 @@
 {% endmacro meta %}
 
 {% macro taxonomies(taxonomy, disp_cat, disp_tag) %}
-
     {% if disp_cat and disp_tag -%}
         {% if taxonomy.categories -%}
             {{ posts::categories(categories=taxonomy.categories) }}
