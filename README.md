@@ -4,7 +4,7 @@ A soft material-like light and dark theme based on [ejmg's zerm theme](https://g
 
 ![Screenshot](screenshot.png)
 
-[Web preview](https://papojari.codeberg.page/)
+[Web preview](https://annaaurora.eu/)
 
 ## Differences
 
@@ -22,7 +22,7 @@ Please follow the Zola documentation for [how to use a
 theme](https://www.getzola.org/documentation/themes/installing-and-using-themes/#installing-a-theme).
 
 In `config.toml`, you will find all values for customization that are supported
-thus far have documentation explaining how they are used. If there is any confusion or something is not working as intended, [please open an issue](https://codeberg.org/papojari/merm/issues)!
+thus far have documentation explaining how they are used. If there is any confusion or something is not working as intended, [please open an issue](https://codeberg.org/annaaurora/merm/issues)!
 
 ## Math
 

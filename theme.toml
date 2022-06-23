@@ -1,11 +1,11 @@
 name = "merm"
 description = "A soft material-like light and dark theme based on ejmg's zerm theme for Zola"
 license = "MIT"
-homepage = "https://codeberg.org/papojari/merm"
+homepage = "https://codeberg.org/annaaurora/merm"
 # The minimum version of Zola required
 min_version = "0.8.0"
 # An optional live demo URL
-demo = "https://papojari.codeberg.page/"
+demo = "https://annaaurora.eu/"
 
 # Any variable there can be overriden in the end user `config.toml`
 # You don't need to prefix variables by the theme name but as this will
@@ -15,8 +15,8 @@ demo = "https://papojari.codeberg.page/"
 
 # The theme author info: you!
 [author]
-name = "papojari"
-homepage = "https://papojari.codeberg.page"
+name = "Anna Aurora"
+homepage = "https://annaaurora.eu"
 
 # If this is porting a theme from another static site engine, provide
 # the info of the original author here
