@@ -12,6 +12,10 @@
   --outline: #8d9287;
   --surface_variant: #43483f;
   --on_surface_variant: #c3c8bb;
+  --error: #ffb4ab;
+  --on_error: #690005;
+  --error_container: #93000a;
+  --on_error_container: #ffdad6;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,5 +33,9 @@
     --outline: #73796d;
     --surface_variant: #dfe4d6;
     --on_surface_variant: #43483f;
+    --error: #ba1a1a;
+    --on_error: #ffffff;
+    --error_container: #ffdad6;
+    --on_error_container: #410002;
   }
 }
