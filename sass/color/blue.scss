@@ -1,5 +1,6 @@
 @media (prefers-color-scheme: light) {
   :root {
+    color-scheme: light;
     --primary: #333cff;
     --on_primary: #ffffff;
     --primary_container: #dfe0ff;
@@ -22,6 +23,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --primary: #bdc2ff;
     --on_primary: #0000ad;
     --primary_container: #0000f0;
