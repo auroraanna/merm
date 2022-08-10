@@ -1,7 +1,7 @@
 {%- macro logo() -%}
 <div class="logo">
     {%- if config.extra.favicon is defined -%}
-        <img src="{{ get_url(path=config.extra.favicon) }}"/>
+        <img src="{{ get_url(path=config.extra.favicon.path) }}"/>
     {%- endif -%}
 
     <a href="{%- if config.extra.logo_home_link -%}{{ config.extra.logo_home_link }}{%- else -%}{{ config.base_url }}{%- endif -%}">

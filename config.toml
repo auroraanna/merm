@@ -76,10 +76,6 @@ full_width = false
 # center theme with default width.
 center = true
 
-# set a custom favicon. Must be placed in root of static/ directory...
-# favicon = ""
-
-
 # Set a custom preview image for your website when posted as a link.
 # Must be placed in root of static/ directory...
 # og_preview_img = ""
@@ -135,3 +131,8 @@ last_name = "Neugebauer"
 ## The username is also shown as the section and post author
 username = "annaaurora"
 gender = "female"
+
+# Set a custom favicon. `path` starts in the `static` directory.
+[extra.favicon]
+type = "image/svg+xml"
+path = "icon.svg"

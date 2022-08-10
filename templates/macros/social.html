@@ -9,7 +9,7 @@
     {%- if config.extra.og_preview_img -%}
         <meta property="og:image" content="{{ get_url(path=config.extra.og_preview_img) }}"/>
     {%- elif config.extra.favicon -%}
-        <meta property="og:image" content="{{ get_url(path=config.extra.favicon) }}"/>
+        <meta property="og:image" content="{{ get_url(path=config.extra.favicon.path) }}"/>
     {%- endif -%}
     {%- if config.extra.author.username -%}
         <meta property="og:profile:username" content="{{ config.extra.author.username }}"/>
