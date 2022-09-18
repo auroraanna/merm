@@ -14,7 +14,13 @@ body {
   font-family: 'Google Sans', Inter, Roboto, 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.54;
-  background-color: var(--background);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--background),
+    var(--background) 0.5rem,
+    var(--surface_variant) 0.5rem,
+    var(--surface_variant) 1rem
+  );
   color: var(--on_background);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,13 +34,17 @@ nav {
 }
 
 header {
-    position: relative;
-    z-index: 99;
+  position: relative;
+  z-index: 99;
 }
 
 main {
-    position: relative;
-    z-index: 0;
+  position: relative;
+  z-index: 0;
+  background-color: var(--background);
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-top: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
