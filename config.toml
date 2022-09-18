@@ -136,3 +136,9 @@ gender = "female"
 [extra.favicon]
 type = "image/svg+xml"
 path = "icon.svg"
+alt = "Pink to purple spiral"
+
+# Gives the favicon in the top left of the website a margin.
+[extra.logo]
+margin = true
+
