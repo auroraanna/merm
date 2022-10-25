@@ -1,0 +1,8 @@
+{% set path_from_content = page.path ~ path %}
+{% set meta = get_image_metadata(path="content" ~ path_from_content) %}
+{% set meta_width = (meta.width*resizing_factor) | int %}
+{% set meta_height = (meta.width*resizing_factor) | int %}
+{% set image = resize_image(path=path_from_content, width=meta_width, height=meta_height, op=op, format=format, quality=quality) %}
+<img src="{{image.url}}" alt="{{alt}}">
+    <a href="{{path}}">original image, not downscaled and more compressed</a>
+</img>
