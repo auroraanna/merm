@@ -117,3 +117,11 @@
     color: var(--footnote-color);
   }
 }
+
+.update {
+    border-style: solid;
+    border-width: 0.15rem;
+    border-radius: 0.4rem;
+    border-color: var(--primary);
+    padding: 0.4rem;
+}
