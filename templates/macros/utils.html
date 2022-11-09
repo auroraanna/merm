@@ -19,12 +19,6 @@
     {%- endif -%}
 {%- endmacro date-%}
 
-{% macro date_updated_display(page) %}
-    {%- if page.extra["updated"] -%}
-        [Updated: {{ page.extra["updated"] | date(format="%Y-%m-%dT%H:%M:%S%z") }}]
-    {%- endif -%}
-{%- endmacro date-%}
-
 {% macro date_custom_format(page) %}
     {%- if page.date -%}
         {{ page.date | date(format=config.extra.date_format) }}
@@ -37,8 +31,26 @@
     {%- endif -%}
 {%- endmacro date-%}
 
-{% macro date_custom_format_updated_display(page) %}
+{% macro date_element(page) %}
+    {%- if page.date -%}
+        <time datetime="{{ utils::date(page=page) }}">{{ utils::date(page=page) }}</time>
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_updated_element(page) %}
     {%- if page.extra["updated"] -%}
-        [Updated: {{ page.extra["updated"] | date(format=config.extra.date_format) }}]
+        [Updated: <time datetime="{{ utils::date_updated(page=page) }}">{{ utils::date_updated(page=page) }}</time>]
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_custom_format_element(page) %}
+    {%- if page.date -%}
+        <time datetime="{{ utils::date(page=page) }}">{{ utils::date_custom_format(page=page) }}</time>
+    {%- endif -%}
+{%- endmacro date-%}
+
+{% macro date_custom_format_updated_element(page) %}
+    {%- if page.extra["updated"] -%}
+        [Updated: <time datetime="{{ utils::date_updated(page=page) }}">{{ utils::date_custom_format_updated(page=page) }}</time>]
     {%- endif -%}
 {%- endmacro date-%}

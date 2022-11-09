@@ -1,8 +1,8 @@
 {% macro section_meta(section) %}
     <div class="post-meta">
         <span class="post-date">
-            {{ utils::date_custom_format(page=section) }}
-            {{ utils::date_custom_format_updated_display(page=section) }}
+            {{ utils::date_custom_format_element(page=section) }}
+            {{ utils::date_custom_format_updated_element(page=section) }}
         </span>
         <span class="post-author">
             {{ utils::author(page=section) }}
@@ -24,8 +24,8 @@
 {% macro meta(page) %}
     <div class="post-meta">
         <span class="post-date">
-            {{ utils::date_custom_format(page=page) }}
-            {{ utils::date_custom_format_updated_display(page=page) }}
+            {{ utils::date_custom_format_element(page=page) }}
+            {{ utils::date_custom_format_updated_element(page=page) }}
         </span>
         <span class="post-author">
             {{ utils::author(page=page) }}
