@@ -1,8 +1,7 @@
 #menu details {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  width: 6.5rem;
+  top: 0.4rem;
+  right: 0.4rem;
 }
 
 #menu summary {
@@ -24,21 +23,20 @@
 }
 
 #menu ul {
-	position: absolute;
-	top: 3.2rem;
-	right: 0.25rem;
-	padding: 0.4rem;
-	width: 8em;
-	background: var(--on_secondary);
+  position: absolute;
+  right: 0rem;
+  padding: 0.4rem;
+  width: max-content;
+  background: var(--on_secondary);
   color: var(--secondary);
-	list-style-type: none;
-	text-align: right;
-	font-size: 1.2rem;
-	border-radius: 0.4rem;
-	margin: 0;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  list-style-type: none;
+  text-align: right;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  margin: 0rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #menu li {
-	margin-top: 0;
+  margin-top: 0rem;
 }
