@@ -68,16 +68,6 @@
             {%-  block main -%}
                 {{ lists::list_pages() }}
             {%- endblock main -%}
-
-            {#-
-            I keep pagination out of list, unlike Terminal, because I don't
-            like how the pagination buttons move with the width of the content
-            div.
-            -#}
-
-            {%- block pagination -%}
-                {{ pagination::paginate() }}
-            {%- endblock pagination -%}
         </main>
         {%- block footer -%}
             <footer>
