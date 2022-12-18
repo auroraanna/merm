@@ -6,10 +6,6 @@
   width: 100%;
   text-align: left;
 
-  &:not(:last-of-type) {
-    border-bottom: 1px solid var(--outline);
-  }
-
   // %meta {
   //   font-size: 1rem;
   //   margin-bottom: 10px;

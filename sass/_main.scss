@@ -15,17 +15,14 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   word-wrap: break-word;
-    45deg,
-    var(--background),
-    var(--background) 0.5rem,
-    var(--surface_variant) 0.5rem,
-    var(--surface_variant) 1rem
-  );
+  background: repeat top/64px url("/tile.png");
   color: var(--on_background);
+  image-rendering: pixelated;
 }
 
-nav {
-  margin-top: 1rem;
+body * {
+  // Only render the background pixelated.
+  image-rendering: initial;
 }
 
 header {
