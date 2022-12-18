@@ -80,8 +80,11 @@ center = true
 # Must be placed in root of static/ directory...
 # og_preview_img = ""
 
-# Copyright notice if desired. Defaults to
-# copyright = "copyright notice here"
+# Copyright notice if desired.
+copyright = "copyright notice here"
+
+# Credit notice if desired.
+credit = "Powered by Zola"
 
 # What is displayed in the top left corner of the website. Default is zerm.
 logo_text = "merm"

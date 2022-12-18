@@ -2,12 +2,14 @@
     {%- if config.extra.copyright -%}
         <div>
             <span>{{ config.extra.copyright | safe }}</span>
-            <span>:: Powered by <a href="https://www.getzola.org/">Zola</a></span>
-        </div>
-    {%- else -%}
-        <div>
-            <span>© 2019 <a href="https://github.com/ejmg/zerm">zerm</a> :: © 2022 <a href="https://annaaurora.eu">Anna Aurora Neugebauer</a></span>
-            <span>:: Powered by <a href="https://www.getzola.org/">Zola</a></span>
         </div>
     {%- endif -%}
 {% endmacro copyright %}
+
+{% macro credit() %}
+    {%- if config.extra.credit -%}
+        <div>
+            <span>{{ config.extra.credit | safe }}</span>
+        </div>
+    {%- endif -%}
+{% endmacro credit %}
