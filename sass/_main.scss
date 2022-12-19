@@ -17,7 +17,7 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   word-break: break-word;
-  background: repeat top/64px url("/tile.png");
+  background: var(--background);
   color: var(--on_background);
   image-rendering: pixelated;
 }
@@ -314,7 +314,17 @@ hr {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    background: repeat top/64px url("/tile-light.png");
+  }
+}
+
 @media (prefers-color-scheme: dark) {
+  body {
+    background: repeat top/64px url("/tile-dark.png");
+  }
+
   .invert-when-dark {
     filter: invert(100%);
   }
