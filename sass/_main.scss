@@ -14,7 +14,7 @@ body {
   font-family: 'Google Sans', Inter, Roboto, 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.54;
-  word-wrap: break-word;
+  word-break: break-word;
   background: repeat top/64px url("/tile.png");
   color: var(--on_background);
   image-rendering: pixelated;
@@ -32,10 +32,7 @@ header {
 
 main {
   position: relative;
-  z-index: 0;
-  background-color: var(--background);
-  border-radius: 1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-top: 2.9rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -233,16 +230,22 @@ ul, ol {
 }
 
 .container {
+  z-index: 0;
   display: flex;
   flex-direction: column;
+  border-radius: 0.4rem;
   padding: 0.4rem;
   width: fit-content;
   max-width: 864px;
+  background-color: var(--background);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   &.full,
   &.center {
     border: none;
-    margin: 2.9rem auto auto auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &.full {
@@ -305,6 +308,10 @@ hr {
   // Rainbow + magenta gradient
   background: linear-gradient(to bottom right, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
   background-attachment: fixed;
+
+  footer {
+    background: var(--background);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
