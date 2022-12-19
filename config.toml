@@ -57,7 +57,7 @@ show_categories = true
 show_tags = true
 
 # Theme color. You can have any color you want, so long as it's...
-# ["red", "yellow", "green", "blue", "purple"]
+# ["red", "yellow", "green", "cyan", "blue", "purple", "halloween"]
 theme_color = "blue"
 
 # Custom css to style over the defaults. This is useful when you only have a
