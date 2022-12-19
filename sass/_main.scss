@@ -12,6 +12,8 @@ body {
   margin: 0rem;
   padding: 0rem;
   font-family: 'Google Sans', Inter, Roboto, 'Open Sans', sans-serif;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: slashed-zero;
   font-size: 1rem;
   line-height: 1.54;
   word-break: break-word;
@@ -157,8 +159,6 @@ figure {
 
 code {
   font-family: 'Iosevka', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
-  font-variant-ligatures: common-ligatures;
-  font-variant-numeric: slashed-zero;
   background: var(--secondary_container);
   color: var(--on_secondary_container);
   padding: 0.1rem;
