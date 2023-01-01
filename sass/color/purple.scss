@@ -1,24 +1,22 @@
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    --primary: #9e00c6;
-    --on_primary: #ffffff;
-    --primary_container: #fed5ff;
-    --on_primary_container: #340044;
-    --secondary: #6a596c;
-    --on_secondary: #ffffff;
-    --secondary_container: #fed5ff;
-    --on_secondary_container: #241727;
-    --background: #fcfcfc;
-    --on_background: #1e1a1e;
-    --outline: #7e747d;
-    --surface_variant: #ecdfe9;
-    --on_surface_variant: #4d444d;
-    --error: #ba1a1a;
-    --on_error: #ffffff;
-    --error_container: #ffdad6;
-    --on_error_container: #410002;
-  }
+:root {
+  color-scheme: light;
+  --primary: #9e00c6;
+  --on_primary: #ffffff;
+  --primary_container: #fed5ff;
+  --on_primary_container: #340044;
+  --secondary: #6a596c;
+  --on_secondary: #ffffff;
+  --secondary_container: #fed5ff;
+  --on_secondary_container: #241727;
+  --background: #fcfcfc;
+  --on_background: #1e1a1e;
+  --outline: #7e747d;
+  --surface_variant: #ecdfe9;
+  --on_surface_variant: #4d444d;
+  --error: #ba1a1a;
+  --on_error: #ffffff;
+  --error_container: #ffdad6;
+  --on_error_container: #410002;
 }
 
 @media (prefers-color-scheme: dark) {
