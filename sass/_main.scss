@@ -197,6 +197,8 @@ blockquote {
 table {
   table-layout: fixed;
   border-collapse: collapse;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 table, th, td {
