@@ -2,9 +2,9 @@
 <div class="logo">
     {%- if config.extra.favicon is defined -%}
         {%- if config.extra.logo.margin -%}
-            <img class="logo-margin" width="160" height="160" src="{{ get_url(path=config.extra.favicon.path) }}"/>
+            <img class="logo-margin" width="160" height="160" src="{{ get_url(path=config.extra.favicon.href) }}"/>
         {%- else -%}
-            <img width="160" height="160" src="{{ get_url(path=config.extra.favicon.path) }}" alt="{{ config.extra.favicon.alt }}"/>
+            <img width="160" height="160" src="{{ get_url(path=config.extra.favicon.href) }}" alt="{{ config.extra.favicon.alt }}"/>
         {%- endif -%}
     {%- endif -%}
 

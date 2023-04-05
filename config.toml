@@ -139,7 +139,8 @@ gender = "female"
 # Set a custom favicon. `path` starts in the `static` directory.
 [extra.favicon]
 type = "image/svg+xml"
-path = "icon.svg"
+sizes = "any"
+href = "icon.svg"
 alt = "Pink to purple spiral"
 
 # Gives the favicon in the top left of the website a margin.
